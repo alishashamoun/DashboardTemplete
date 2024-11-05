@@ -79,21 +79,21 @@
 
         <li class="menu-item {{ request()->routeIs('view_all_order') ? 'active' : '' }}">
             <a href="{{ route('view_all_order') }}" class="menu-link">
-               <i class="menu-icon fa-solid fa-calendar-days"></i>
+               <i class="menu-icon fa-solid fa-eye"></i>
                 <div data-i18n="Basic">View All Orders</div>
             </a>
         </li>
 
         <li class="menu-item {{ request()->routeIs('manifest') ? 'active' : '' }}">
             <a href="{{ route('manifest') }}" class="menu-link">
-               <i class="menu-icon fa-solid fa-calendar-days"></i>
+               <i class="menu-icon fa-solid fa-inbox"></i>
                 <div data-i18n="Basic">Manifest</div>
             </a>
         </li>
 
         <li class="menu-item {{ request()->routeIs('de_manifest') ? 'active' : '' }}">
             <a href="{{ route('de_manifest') }}" class="menu-link">
-               <i class="menu-icon fa-solid fa-calendar-days"></i>
+                <i class="menu-icon fa-solid fa-inbox"></i>
                 <div data-i18n="Basic"> De-Manifest
                 </div>
             </a>
@@ -102,23 +102,51 @@
 
         <li class="menu-item {{ request()->routeIs('order_processing') ? 'active' : '' }}">
             <a href="{{ route('order_processing') }}" class="menu-link">
-               <i class="menu-icon fa-solid fa-calendar-days"></i>
+                <i class="menu-icon fa-solid fa-cart-shopping"></i>
                 <div data-i18n="Basic">Orders Processing</div>
             </a>
         </li>
 
 
-        <li class="menu-item {{ request()->routeIs('manifest') ? 'active' : '' }}">
-            <a href="{{ route('bulk_status') }}" class="menu-link">
-               <i class="menu-icon fa-solid fa-calendar-days"></i>
+        <li class="menu-item {{ request()->routeIs('bulk_status_update') ? 'active' : '' }}">
+            <a href="{{ route('bulk_status_update') }}" class="menu-link">
+                <i class="menu-icon fa-regular fa-square-check"></i>
                 <div data-i18n="Basic">Bulk Status Update</div>
             </a>
         </li>
 
-        <li class="menu-item {{ request()->routeIs('manifest') ? 'active' : '' }}">
-            <a href="{{ route('manifest') }}" class="menu-link">
-               <i class="menu-icon fa-solid fa-calendar-days"></i>
-                <div data-i18n="Basic">Manifest</div>
+        <li class="menu-item {{ request()->routeIs('order_status_update') ? 'active' : '' }}">
+            <a href="{{ route('order_status_update') }}" class="menu-link">
+                <i class="menu-icon fa-regular fa-square-check"></i>
+                <div data-i18n="Basic"> Order Status Update</div>
+            </a>
+        </li>
+
+        <li class="menu-item {{ request()->routeIs('view_order_assign') ? 'active' : '' }}">
+            <a href="{{ route('view_order_assign') }}" class="menu-link">
+                <i class="menu-icon fa-solid fa-eye"></i>
+                <div data-i18n="Basic">View Order Assignment</div>
+            </a>
+        </li>
+
+        <li class="menu-item {{ request()->routeIs('bussiness_account') ? 'active' : '' }}">
+            <a href="{{ route('bussiness_account') }}" class="menu-link">
+                <i class="menu-icon fa-regular fa-user"></i>
+                <div data-i18n="Basic"> Bussiness Accounts</div>
+            </a>
+        </li>
+
+        <li class="menu-item {{ request()->routeIs('reports') ? 'active' : '' }}">
+            <a href="{{ route('reports') }}" class="menu-link">
+                <i class="menu-icon fa-regular fa-file"></i>
+                <div data-i18n="Basic">Reports</div>
+            </a>
+        </li>
+
+        <li class="menu-item {{ request()->routeIs('setting') ? 'active' : '' }}">
+            <a href="{{ route('setting') }}" class="menu-link">
+                <i class="menu-icon fa-solid fa-gear"></i>
+                <div data-i18n="Basic">Setting</div>
             </a>
         </li>
         <li class="menu-item ">
