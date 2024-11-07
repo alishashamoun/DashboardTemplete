@@ -289,7 +289,7 @@
                                                             <option value="">parcel</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-3 mt-4">
                                                         <label for="" class="control-label">
                                                             <input type="checkbox" value="1" checked="true">
                                                             Receipt Print
