@@ -286,29 +286,34 @@
 
                                                     <div class="col-3">
                                                         <label for="name">status</label>
-                                                        <select name="" id="" class="form-control">
+                                                        <select name="" id="" class="js-example-templating form-control">
+                                                            <option value="">new booked</option>
                                                             <option value="">new booked</option>
                                                             <option value="">parcel</option>
-                                                            <option value=""></option>
-                                                            <option value=""></option>
+                                                            <option value="">parcel</option>
+                                                            <option value="">parcel</option>
+                                                            <option value="">parcel</option>
+                                                            <option value="">parcel</option>
+                                                            <option value="">parcel</option>
+
                                                         </select>
                                                     </div>
                                                     <div class="col-3">
                                                         <label for="" class="control-label">
-                                                            <input type="checkox" value="1" checked="true">
+                                                            <input type="checkbox" value="1" checked="true">
                                                             Receipt Print
                                                         </label>
                                                     </div>
-
-
-
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="save-printbtn">
+                             <a href="#" class="btn btn-primary">Save</a>
+                             <a href="#" class="btn btn-primary">Save & Print</a>
                         </div>
                     </form>
                 </div>

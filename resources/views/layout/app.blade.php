@@ -13,6 +13,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" />
 
+    <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- Fonts -->
@@ -29,7 +30,7 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/css/core.css') }}" class="template-customizer-core-css" />
     <link rel="stylesheet" href="{{ asset('assets/vendor/css/theme-default.css') }}"
         class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" />
+
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
@@ -55,6 +56,29 @@
     <!--! Toastr -->
     <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/toastr.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css">
+    <!-- Include Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- DataTables Buttons CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.1.2/css/buttons.dataTables.min.css">
+    <!-- Buttons JS -->
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+    <!-- Buttons JS -->
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+    <!-- PDFMake (for PDF export) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <!-- JSZip (for Excel export) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <!-- Buttons for HTML5 export -->
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+    <!-- Buttons for Print export -->
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+
+    <!-- Include Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" />
+
 </head>
 
 <body>
@@ -210,13 +234,14 @@
             // $('#summernote').summernote();
             // $('#summernote1').summernote();
 
-            $("#example1").DataTable({
-                "responsive": false,
-                "lengthChange": false,
-                "autoWidth": true,
-                "rowReorder": true,
-                "buttons": ["csv", "excel", "pdf", "print"]
-            });
+            // $(".display").DataTable({
+            //     "responsive": false,
+            //     "lengthChange": false,
+            //     "autoWidth": true,
+            //     "rowReorder": true,
+            // });
+
+            // new DataTable('');
 
         });
         @if (session('success'))
@@ -233,6 +258,40 @@
                 toastr.error("{{ $error }}")
             @endforeach
         @endif
+
+        function formatState(state) {
+            if (!state.id) {
+                return state.text;
+            }
+            var baseUrl = "/user/pages/images/flags";
+            var $state = $(
+                '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' +
+                state.text + '</span>'
+            );
+            return $state;
+        };
+
+        $(".js-example-templating").select2({
+            templateResult: formatState
+        });
+
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2();
+            $(".display").DataTable({
+                "responsive": false,
+                "lengthChange": false,
+                "autoWidth": true,
+                "rowReorder": true,
+                    dom: '<"top d-flex justify-content-end align-items-center gap-3"fB>rtip',
+                buttons: [
+                    'copy',
+                    'csv',
+                    'excel',
+                    'pdf',
+                    'print'
+                ]
+            });
+        });
     </script>
 
 </body>

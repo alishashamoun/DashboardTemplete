@@ -105,3 +105,45 @@
   text-align: center;
   margin-top: 1rem;
 }
+
+li#divide_box {
+    margin: 4px;
+    border-top: 1px solid #cccccc73;
+    padding-top: 10px;
+}
+.left-sidebar ul li:hover {
+    background-color: #d6d6f3 !important;
+}
+.left-sidebar ul li.active {
+    background-color: #d6d6f3 !important;
+}
+.buss_btn ul li {
+    display: inline-block !important;
+}
+.buss_btn ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.buss_btn ul li a.btn-style {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    background-color: #007bff;
+    transition: background-color 0.3s;
+}
+
+
+.buss_btn ul li a.active {
+    background-color: #28a745;
+}
+
+.buss_btn ul li a.pending {
+    background-color: #ffc107;
+}
+
+
