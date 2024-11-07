@@ -173,10 +173,11 @@ li#divide_box {
     overflow: hidden;
     width: 100%;
     background-color: #fff;
+  
 }
 
 .input-icon-wrapper .icon {
-    padding: 6  px;
+    padding: 6px;
     color: #555;
 }
 
