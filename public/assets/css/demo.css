@@ -149,7 +149,7 @@ li#divide_box {
 .btn-style.add_new {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #007bff; 
+    background-color: #007bff;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -164,6 +164,29 @@ li#divide_box {
 
 .text-end {
     text-align: right;
+}
+.input-icon-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+}
+
+.input-icon-wrapper .icon {
+    padding: 6  px;
+    color: #555;
+}
+
+.input-icon-wrapper .input-field {
+    border: none;
+    flex: 1;
+    font-size: 12px;
+    outline: none;
+    background-color: transparent;
+    color: #333;
 }
 
 
