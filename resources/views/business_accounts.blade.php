@@ -14,8 +14,8 @@
                     <h6>Business Accounts <span style="color:#ccc; font-size:13px;" >Let's get a quick overview...</span></h6>
                     <div class="buss_btn">
                         <ul>
-                            <li><a href="" class="btn-style active">Approved(452)</a></li>
-                            <li><a href="" class="btn-style pending">Pending(114)</a></li>
+                            <li><a href="#" class="btn-style active">Approved(452)</a></li>
+                            <li><a href="#" class="btn-style pending">Pending(114)</a></li>
                         </ul>
                     </div>
 
@@ -24,8 +24,12 @@
                             <div class="col-12">
                                 <div class="card-body">
                                     <div class="panel panel-default ">
-                                        <h4>Business Accounts</h4>
-
+                                        <div class="row account">
+                                            <div class="col-6"><h4>Business Accounts</h4></div>
+                                            <div class="col-6 text-end">
+                                                <a href="#" class="btn-style add_new">Add New</a>
+                                            </div>
+                                        </div>
 
                                         <div class="panel-body" id="same_form_layout">
 

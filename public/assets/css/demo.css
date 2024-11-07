@@ -146,4 +146,25 @@ li#divide_box {
     background-color: #ffc107;
 }
 
+.btn-style.add_new {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff; 
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-style.add_new:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.text-end {
+    text-align: right;
+}
+
+
 
