@@ -4,7 +4,7 @@
     .table td {
         font-size: 11px !important;
     }
-    
+
 </style>
 @section('content')
     {{-- ///// --}}
@@ -18,17 +18,11 @@
                                 <div class="card-body">
                                     <div class="panel panel-default ">
                                         <h4>De-Manifest Report</h4>
-
-
                                         <div class="panel-body" id="same_form_layout">
-
                                             <div id="basic-datatable_wrapper"
                                                 class="dataTables_wrapper form-horizontal dt-bootstrap no-footer">
-
                                                 <div class="row">
-
                                                     <div class="col-sm-12 table-responsive gap-none">
-
                                                         <table
                                                             class="display table table-striped table-bordered dataTable_with_sorting no-footer" >
                                                             <thead>
@@ -58,9 +52,6 @@
                                                                     <td class="sorting_1"></td>
                                                                     <td class="sorting_1">admin branch</td>
                                                                     <td class="sorting_1"><button class="btn btn-primary">Print</button></td>
-
-
-
                                                                 </tr>
                                                             </tbody>
                                                         </table>

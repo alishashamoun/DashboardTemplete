@@ -187,39 +187,35 @@
                                             <div class="card-body">
                                                 <h4 class="mb-3">Price Information</h4>
                                                 <div class="row mb-3">
-
                                                     <div class="col-2">
                                                         <label for="name">Delivery Charges</label>
-                                                        <input type="text" value="0"
-                                                            class="form-control">
+                                                        <input type="text" value="0" class="form-control">
                                                     </div>
 
                                                     <div class="col-2">
                                                         <label for="name">Total Charges</label>
-                                                        <input type="text" readonly="true"
-                                                            class="form-control" value="0.00">
+                                                        <input type="text" readonly="true" class="form-control"
+                                                            value="0.00">
                                                     </div>
 
                                                     <div class="col-2">
                                                         <label for="name">Fuel Surcharge (0%)</label>
-                                                        <input type="text" readonly="true"
-                                                            class="form-control" value="0.00">
+                                                        <input type="text" readonly="true" class="form-control"
+                                                            value="0.00">
                                                     </div>
 
                                                     <div class="col-2">
                                                         <label for="name">Sales tax</label>
-                                                        <input type="text" readonly="true"
-                                                            class="form-control" value="0.00">
+                                                        <input type="text" readonly="true" class="form-control"
+                                                            value="0.00">
                                                     </div>
 
                                                     <div class="col-2">
                                                         <label for="name">Net Amount</label>
-                                                        <input type="text" readonly="true"
-                                                            class="form-control" value="0.00">
+                                                        <input type="text" readonly="true" class="form-control"
+                                                            value="0.00">
                                                     </div>
-
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
@@ -235,39 +231,35 @@
                                             <div class="card-body">
                                                 <h4 class="mb-3">Price Information</h4>
                                                 <div class="row mb-3">
-
                                                     <div class="col-2">
                                                         <label for="name">Delivery Charges</label>
-                                                        <input type="text" value="0"
-                                                            class="form-control">
+                                                        <input type="text" value="0" class="form-control">
                                                     </div>
 
                                                     <div class="col-2">
                                                         <label for="name">Total Charges</label>
-                                                        <input type="text" readonly="true"
-                                                            class="form-control" value="0.00">
+                                                        <input type="text" readonly="true" class="form-control"
+                                                            value="0.00">
                                                     </div>
 
                                                     <div class="col-2">
                                                         <label for="name">Fuel Surcharge (0%)</label>
-                                                        <input type="text" readonly="true"
-                                                            class="form-control" value="0.00">
+                                                        <input type="text" readonly="true" class="form-control"
+                                                            value="0.00">
                                                     </div>
 
                                                     <div class="col-2">
                                                         <label for="name">Sales tax</label>
-                                                        <input type="text" readonly="true"
-                                                            class="form-control" value="0.00">
+                                                        <input type="text" readonly="true" class="form-control"
+                                                            value="0.00">
                                                     </div>
 
                                                     <div class="col-2">
                                                         <label for="name">Net Amount</label>
-                                                        <input type="text" readonly="true"
-                                                            class="form-control" value="0.00">
+                                                        <input type="text" readonly="true" class="form-control"
+                                                            value="0.00">
                                                     </div>
-
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
@@ -283,10 +275,10 @@
                                             <div class="card-body">
                                                 <h4 class="mb-3">Status</h4>
                                                 <div class="row mb-3">
-
                                                     <div class="col-3">
                                                         <label for="name">status</label>
-                                                        <select name="" id="" class="js-example-templating form-control">
+                                                        <select name="" id=""
+                                                            class="js-example-templating form-control">
                                                             <option value="">new booked</option>
                                                             <option value="">new booked</option>
                                                             <option value="">parcel</option>
@@ -295,7 +287,6 @@
                                                             <option value="">parcel</option>
                                                             <option value="">parcel</option>
                                                             <option value="">parcel</option>
-
                                                         </select>
                                                     </div>
                                                     <div class="col-3">
@@ -312,8 +303,8 @@
                             </div>
                         </div>
                         <div class="save-printbtn">
-                             <a href="#" class="btn btn-primary">Save</a>
-                             <a href="#" class="btn btn-primary">Save & Print</a>
+                            <a href="#" class="btn btn-primary">Save</a>
+                            <a href="#" class="btn btn-primary">Save & Print</a>
                         </div>
                     </form>
                 </div>

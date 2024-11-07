@@ -106,9 +106,6 @@
                                                                     <td class="sorting_1"></td>
                                                                     <td class="sorting_1">CN</td>
                                                                     <td class="sorting_1">CN</td>
-                                                               
-
-
                                                                 </tr>
                                                             </tbody>
                                                         </table>

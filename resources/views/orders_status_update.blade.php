@@ -8,7 +8,6 @@
                     <div class="row mb-5">
                         <div class="col-sm-2">
                             <div class="form-group">
-
                                 <input type="text"
                                     class="form-control datetimepicker4" name="from" placeholder="Enter CN No">
                             </div>
@@ -41,7 +40,6 @@
                                                 <th>Action</th>
                                             </tr>
                                         </table>
-
                                     </div>
                                 </div>
                             </div>

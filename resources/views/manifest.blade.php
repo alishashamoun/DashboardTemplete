@@ -17,13 +17,9 @@
                                 <div class="card-body">
                                     <div class="panel panel-default ">
                                         <h4>Manifest Report</h4>
-                                       
-
                                         <div class="panel-body" id="same_form_layout">
-
                                             <div id="basic-datatable_wrapper"
                                                 class="dataTables_wrapper form-horizontal dt-bootstrap no-footer">
-
                                                 <div class="row">
                                                     <form method="GET" action="" class="pickuprun_sheet">
                                                         <div class="row">
@@ -48,8 +44,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-
-
                                                     </form>
                                                     <div class="col-sm-12 table-responsive gap-none">
 
@@ -105,7 +99,6 @@
                                                                     <td class="sorting_1">81.35000000000001</td>
                                                                     <td class="sorting_1">2024-11-06 01:15:41</td>
                                                                     <td class="sorting_1">2024-11-06 01:15:41</td>
-
                                                                 </tr>
                                                             </tbody>
                                                         </table>

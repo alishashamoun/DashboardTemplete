@@ -13,7 +13,6 @@
                                         <div class="row">
                                             <div class="col-6">
                                                 <textarea name="" id="" cols="90" rows="8" placeholder="Please enter order ids" class="form-control"></textarea>
-
                                                 <div class="row mt-5">
                                                     <div class="col-3">
                                                         <label for="">Order Status</label>
@@ -35,14 +34,9 @@
 
                                                 </div>
                                             </div>
-
-
                                             <div class="col-6" style="border: 1px solid #e3e3e3; min-height: 355px; ">
-
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
