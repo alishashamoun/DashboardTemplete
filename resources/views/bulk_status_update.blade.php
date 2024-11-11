@@ -245,14 +245,10 @@
                                         <label for="">Order Update Status (*)</label>
                                         <select name="" id="" class="js-example-templating form-control">
                                             <option value="">new booked</option>
-                                            <option value="">new booked</option>
+                                            <option value="">new</option>
                                             <option value="">parcel</option>
-                                            <option value="">parcel</option>
-                                            <option value="">parcel</option>
-                                            <option value="">parcel</option>
-                                            <option value="">parcel</option>
-                                            <option value="">parcel</option>
-
+                                            <option value="">items</option>
+                                            <option value="">inform</option>
                                         </select>
                                     </div>
                                 </div>
