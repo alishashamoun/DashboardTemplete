@@ -125,11 +125,11 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-lg-12 mb-4 order-0">
-                                <div class="card mt-3">
-                                    <div class="d-flex align-items-end row">
-                                        <div class="col-12">
+                        <div class="col-lg-12 mb-4 order-0">
+                                <div class="row d-flex">
+
+                                <div class="col-8">
+                                            <div class="card mt-3">
                                             <div class="card-body">
                                                 <h4 class="mb-3">Delivery Details</h4>
                                                 <div class="row mb-3">
@@ -172,10 +172,60 @@
                                                             class="form-control">
                                                     </div>
                                                 </div>
+                                                <div class="row">
+                                                    <div class="col-12" style="border: 1px solid #e3e3e3; min-height: 300px; ">
+
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+
                                 </div>
+                                        <div class="col-4 mt-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="col-12">
+                                                        <label for="">Item Detail</label>
+
+                                                        <textarea name="" id="" cols="50" rows="1" class="form-control"></textarea>
+                                                    </div>
+
+                                                    <div class="col-12 mt-3">
+                                                        <label for="">
+                                                            Special Instruction</label>
+                                                        <textarea name="" id="" cols="50" rows="1" class="form-control"></textarea>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6 mt-3">
+                                                            <label for="">Reference No.</label>
+                                                            <input type="number" class="form-control">
+                                                        </div>
+                                                        <div class="col-6 mt-3">
+                                                            <label for="">No. of Pieces</label>
+                                                            <input type="number" class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-4 mt-3">
+                                                            <label for="">Order ID.</label>
+                                                            <input type="number" name="" id=""  class="form-control">
+                                                        </div>
+                                                        <div class="col-4 mt-3">
+                                                            <label for="">Weight (Kg)</label>
+                                                            <input type="number" name="" id=""  class="form-control">
+                                                        </div>
+                                                        <div class="col-4 mt-3">
+                                                            <label for="">*COD Amount</label>
+                                                            <input type="number" name="" id=""  class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
                             </div>
                         </div>
 
