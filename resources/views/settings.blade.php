@@ -4,7 +4,7 @@
     <div class="content-wrapper">
         <!-- Content -->
         <div class="container-fluid flex-grow-1 container-p-y">
-            <h6>Setup Let's get a quick overview...</h6>
+            <h5>Setup <span class="f-3">Let's get a quick overview...</span></h5>
             <div class="row">
                 <div class="col-lg-2 mb-4 order-0">
                     <div class="card">

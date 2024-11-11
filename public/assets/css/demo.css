@@ -112,10 +112,10 @@ li#divide_box {
     padding-top: 10px;
 }
 .left-sidebar ul li:hover {
-    background-color: #d6d6f3 !important;
+    background-color: #f7e2e6 !important;
 }
 .left-sidebar ul li.active {
-    background-color: #d6d6f3 !important;
+    background-color: #f7e2e6 !important;
 }
 .buss_btn ul li {
     display: inline-block !important;
@@ -173,7 +173,7 @@ li#divide_box {
     overflow: hidden;
     width: 100%;
     background-color: #fff;
-  
+
 }
 
 .input-icon-wrapper .icon {
