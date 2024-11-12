@@ -13,15 +13,15 @@
                                     <div class="left-sidebar">
                                         <ul style="list-style: none">
                                             <li class="mt-3"><a href="#"> <i class="menu-icon fa-solid fa-gear"></i>Setup</a></li>
-                                            <li class="mt-3" class="active"><a href="">General Setting</a></li>
-                                            <li class="mt-3"><a href="">Status</a></li>
+                                            <li class="mt-3" class="active"><a href="#">General Setting</a></li>
+                                            <li class="mt-3"><a href="#">Status</a></li>
 
-                                            <li class="mt-3" id="divide_box"><a href=""><i class="menu-icon fa-solid fa-gear"></i>Zone Setup</a></li>
-                                            <li class="mt-3"><a href="">Service</a></li>
-                                            <li class="mt-3"><a href="">Zone</a></li>
+                                            <li class="mt-3" id="divide_box"><a href="#"><i class="menu-icon fa-solid fa-gear"></i>Zone Setup</a></li>
+                                            <li class="mt-3"><a href="#">Service</a></li>
+                                            <li class="mt-3"><a href="#">Zone</a></li>
 
-                                            <li class="mt-3" id="divide_box"><a href=""><i class="menu-icon fa-solid fa-dollar-sign"></i>Charges</a></li>
-                                            <li class="mt-3" id="divide_box"><a href=""><i class="menu-icon fa-solid fa-user"></i>Users</a></li>
+                                            <li class="mt-3" id="divide_box"><a href="#"><i class="menu-icon fa-solid fa-dollar-sign"></i>Charges</a></li>
+                                            <li class="mt-3" id="divide_box"><a href="#"><i class="menu-icon fa-solid fa-user"></i>Users</a></li>
 
                                         </ul>
                                     </div>

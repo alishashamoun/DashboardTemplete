@@ -36,16 +36,16 @@
                                                 <button class="btn btn-warning">Generate Reports</button>
                                             </div>
 
-                                            <div class="col-4 read_btn">
+                                            <div class="col-4 readhref">
                                                 <ul>
                                                     <li>
-                                                        <a href="">All <span>19</span></a>
+                                                        <a href="#" class="all_btn">All (19)</a>
                                                     </li>
                                                     <li>
-                                                        <a href="">Read <span>10</span></a>
+                                                        <a href="#" class="read_btn">Read (0)</a>
                                                     </li>
                                                     <li>
-                                                        <a href="">Unread<span>19</span></a>
+                                                        <a href="#" class="unread_btn">Unread (19)</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -85,7 +85,7 @@
                                                                     <td>1</td>
                                                                     <td>1</td>
                                                                     <td>1</td>
-                                                               
+
 
 
 
@@ -93,7 +93,7 @@
                                                                         <span class="badge bg-secondary">unread</span>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="" style="color:blue;"><i
+                                                                        <a href="#" style="color:blue;"><i
                                                                                 class="fa-solid fa-eye"></i></a>
                                                                     </td>
 

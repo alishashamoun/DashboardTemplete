@@ -154,7 +154,7 @@
                                                                         <span class="badge bg-info text-dark">Pending</span>
                                                                     </td>
                                                                     <td>
-                                                                        <a href="" style="color:blue;"><i class="fa-solid fa-eye"></i></a>   <a href=""><i class="fa-solid fa-trash-can"></i></a>
+                                                                        <a href="#" style="color:blue;"><i class="fa-solid fa-eye"></i></a>   <a href="#"><i class="fa-solid fa-trash-can"></i></a>
                                                                     </td>
 
 

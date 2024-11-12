@@ -202,9 +202,27 @@ li#divide_box {
     text-align: left;
     font-size: 15px !important;
   }
-  .read_btn ul li {
+  .readhref ul li {
     list-style: none;
     display: inline-block;
+}
+a.all_btn {
+    background-color: #c71818;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+}
+a.read_btn {
+    background-color: #c71818;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+}
+a.unread_btn {
+    background-color: #c71818;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
 }
 
 
