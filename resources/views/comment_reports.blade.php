@@ -36,7 +36,7 @@
                                                 <button class="btn btn-warning">Generate Reports</button>
                                             </div>
 
-                                            <div class="col-4 readhref">
+                                            <div class="col-4 mt-4 readhref">
                                                 <ul>
                                                     <li>
                                                         <a href="#" class="all_btn">All (19)</a>
