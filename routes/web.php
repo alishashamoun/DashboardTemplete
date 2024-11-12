@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\BulkStatusUpdateController;
 use App\Http\Controllers\BussinessAccountController;
+use App\Http\Controllers\ChargeReportController;
+use App\Http\Controllers\CommentReportController;
 use App\Http\Controllers\DeManifestController;
 use App\Http\Controllers\FormBookingsController;
 use App\Http\Controllers\ManifestController;
 use App\Http\Controllers\OrderProcessingController;
+use App\Http\Controllers\OrderReportController;
 use App\Http\Controllers\OrderStatusUpdateController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReportController;
@@ -49,6 +52,8 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('order-status-update', [OrderStatusUpdateController::class, 'index'])->name('order_status_update');
     Route::get('view-order-assign', [ViewOrderAssignController::class, 'index'])->name('view_order_assign');
     Route::get('bussiness-account', [BussinessAccountController::class, 'index'])->name('bussiness_account');
-    Route::get('reports', [ReportController::class, 'index'])->name('reports');
+    Route::get('charges-reports', [ChargeReportController::class, 'index'])->name('charges_reports');
+    Route::get('order-reports', [OrderReportController::class, 'index'])->name('order_reports');
+    Route::get('comments-reports', [CommentReportController::class, 'index'])->name('comments_reports');
     Route::get('setting', [SettingController::class, 'index'])->name('setting');
 });

@@ -189,6 +189,22 @@ li#divide_box {
     background-color: transparent;
     color: #333;
 }
+#report th {
+    font-size: 12px !important;
+  }
 
+  #report th {
+    padding: 25px 3px !important;
+    text-align: left;
+  }
+  #report td{
+    padding: 25px 15px !important;
+    text-align: left;
+    font-size: 15px !important;
+  }
+  .read_btn ul li {
+    list-style: none;
+    display: inline-block;
+}
 
 

@@ -136,12 +136,37 @@
             </a>
         </li>
 
-        <li class="menu-item {{ request()->routeIs('reports') ? 'active' : '' }}">
+        {{-- <li class="menu-item {{ request()->routeIs('reports') ? 'active' : '' }}">
             <a href="{{ route('reports') }}" class="menu-link">
                 <i class="menu-icon fa-regular fa-file"></i>
                 <div data-i18n="Basic">Reports</div>
             </a>
+        </li> --}}
+
+
+
+          <li class="menu-item {{ request()->routeIs('charges_reports') ? 'active' : '' }}">
+          <div class="accordion accordion-flush mx-4" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed p-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <i class="menu-icon fa-regular fa-file"></i> Report
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <a href="{{ route('charges_reports') }}" class="d-block mb-2">Charges Report</a>
+                  <a href="{{ route('order_reports') }}" class="d-block mb-2">Order Report</a>
+                  <a href="{{ route('comments_reports') }}" class="d-block mb-2">Comments Report</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
+
+
+
+
 
         <li class="menu-item {{ request()->routeIs('setting') ? 'active' : '' }}">
             <a href="{{ route('setting') }}" class="menu-link">

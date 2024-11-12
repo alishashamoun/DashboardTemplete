@@ -173,7 +173,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-12" style="border: 1px solid #e3e3e3; min-height: 300px; ">
+                                                    <div class="col-12" style="border: 1px solid #e3e3e3; min-height: 200px; ">
 
                                                     </div>
                                                 </div>
