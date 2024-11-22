@@ -70,8 +70,8 @@
                 <div data-i18n="Basic">User</div>
             </a>
         </li>
-        <li class="menu-item {{ request()->routeIs('form_booking') ? 'active' : '' }}">
-            <a href="{{ route('form_booking') }}" class="menu-link">
+        <li class="menu-item {{ request()->routeIs('form-booking.*') ? 'active' : '' }}">
+            <a href="{{ route('form-booking.index') }}" class="menu-link">
                <i class="menu-icon fa-solid fa-calendar-days"></i>
                 <div data-i18n="Basic">Form Booking</div>
             </a>

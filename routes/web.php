@@ -36,14 +36,11 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
-
-
 // Admin routes
 Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
     Route::resource('users', UserController::class);
-    Route::get('form-booking', [FormBookingsController::class, 'index'])->name('form_booking');
+    Route::resource('/form-booking', FormBookingsController::class);
     Route::get('view-all-order', [ViewOrderController::class, 'index'])->name('view_all_order');
     Route::get('manifest', [ManifestController::class, 'index'])->name('manifest');
     Route::get('de-manifest', [DeManifestController::class, 'index'])->name('de_manifest');
