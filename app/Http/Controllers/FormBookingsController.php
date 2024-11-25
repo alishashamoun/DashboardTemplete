@@ -21,18 +21,16 @@ class FormBookingsController extends Controller
 
     public function store(Request $request)
     {
+        Log::info('Request Data Before Validation:', $request->all());
 
-        Log::info($request->all());
 
-        $request->validate([
-            'customer_id' => 'required|integer',
-            'order_id' => 'required|string',
+        $validated = $request->validate([
             'customer_name' => 'required|string',
             'admin_name' => 'required|string',
             'product_type' => 'required|string',
             'service_type' => 'required|string',
-            'order_date' => 'required|string',
-            'order_time' => 'required|string',
+            'order_date' => 'required|date_format:Y-m-d',
+            'order_time' => 'required|date_format:H:i',
             'booking_type' => 'required|string',
             'area' => 'nullable|string',
             'shipper_name' => 'required|string',
@@ -52,56 +50,29 @@ class FormBookingsController extends Controller
             'reference_no' => 'nullable|string',
             'no_of_piece' => 'nullable|string',
             'weight' => 'nullable|string',
-            'cod_amount' => 'nullable|string',
-            'delivery_charges' => 'nullable|string',
-            'total_charges' => 'nullable|string',
-            'fuel_surcharge' => 'nullable|string',
-            'sales_tax' => 'nullable|string',
-            'net_amount' => 'nullable|string',
+            'cod_amount' => 'nullable|numeric',
+            'delivery_charges' => 'nullable|numeric',
+            'total_charges' => 'nullable|numeric',
+            'fuel_surcharge' => 'nullable|numeric',
+            'sales_tax' => 'nullable|numeric',
+            'net_amount' => 'nullable|numeric',
             'status' => 'nullable|string',
         ]);
 
+        Log::info('Validated Data:', $validated);
 
-        FormBooking::create([
-            'customer_id' => $request->customer_id,
-            'order_id' => $request->order_id,
-            'customer_name' => $request->customer_name,
-            'admin_name' => $request->admin_name,
-            'product_type' => $request->product_type,
-            'service_type' => $request->service_type,
-            'order_date' => $request->order_date,
-            'order_time' => $request->order_time,
-            'booking_type' => $request->booking_type,
-            'area' => $request->area,
-            'shipper_name' => $request->shipper_name,
-            'shipper_phone' => $request->shipper_phone,
-            'shipper_email' => $request->shipper_email,
-            'cnic' => $request->cnic,
-            'pickup_address' => $request->pickup_address,
-            'sender_address' => $request->sender_address,
-            'city' => $request->city,
-            'consignee_name' => $request->consignee_name,
-            'consignee_email' => $request->consignee_email,
-            'consignee_phone' => $request->consignee_phone,
-            'receiver_address' => $request->receiver_address,
-            'consignee_address' => $request->consignee_address,
-            'item_detail' => $request->item_detail,
-            'special_instruction' => $request->special_instruction,
-            'reference_no' => $request->reference_no,
-            'no_of_piece' => $request->no_of_piece,
-            'weight' => $request->weight,
-            'cod_amount' => $request->cod_amount,
-            'delivery_charges' => $request->delivery_charges,
-            'total_charges' => $request->total_charges,
-            'fuel_surcharge' => $request->fuel_surcharge,
-            'sales_tax' => $request->sales_tax,
-            'net_amount' => $request->net_amount,
-            'status' => $request->status,
+        try {
+            $formBooking = FormBooking::create($validated);
 
-        ]);
+            Log::info('Data successfully saved to the database.');
 
-        return redirect()->route('form-booking.index')->with('success', 'Booking successfully created.');
+            return redirect()->back()->with('success', 'Booking successfully created.');
+        } catch (\Exception $e) {
+            Log::error('Error saving data: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Failed to save booking.');
+        }
     }
+
 
     public function show($id)
     {
@@ -121,8 +92,7 @@ class FormBookingsController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'customer_id' => 'required|integer',
-            'order_id' => 'required|string',
+
             'customer_name' => 'required|string',
             'admin_name' => 'required|string',
             'product_type' => 'required|string',
@@ -159,43 +129,7 @@ class FormBookingsController extends Controller
 
         $formBooking = FormBooking::findOrFail($id);
 
-        $formBooking->update([
-            'customer_id' => $request->customer->name,
-            'order_id' => $request->order_id,
-            'customer_name' => $request->customer_name,
-            'admin_name' => $request->admin_name,
-            'product_type' => $request->product_type,
-            'service_type' => $request->service_type,
-            'order_date' => $request->order_date,
-            'order_time' => $request->order_time,
-            'booking_type' => $request->booking_type,
-            'area' => $request->area,
-            'shipper_name' => $request->shipper_name,
-            'shipper_phone' => $request->shipper_phone,
-            'shipper_email' => $request->shipper_email,
-            'cnic' => $request->cnic,
-            'pickup_address' => $request->pickup_address,
-            'sender_address' => $request->sender_address,
-            'city' => $request->city,
-            'consignee_name' => $request->consignee_name,
-            'consignee_email' => $request->consignee_email,
-            'consignee_phone' => $request->consignee_phone,
-            'receiver_address' => $request->receiver_address,
-            'consignee_address' => $request->consignee_address,
-            'item_detail' => $request->item_detail,
-            'special_instruction' => $request->special_instruction,
-            'reference_no' => $request->reference_no,
-            'no_of_piece' => $request->no_of_piece,
-            'weight' => $request->weight,
-            'cod_amount' => $request->cod_amount,
-            'delivery_charges' => $request->delivery_charges,
-            'total_charges' => $request->total_charges,
-            'fuel_surcharge' => $request->fuel_surcharge,
-            'sales_tax' => $request->sales_tax,
-            'net_amount' => $request->net_amount,
-            'status' => $request->status,
-
-        ]);
+        $formBooking->update($request->all());
 
         return redirect()->route('form-booking.show', $formBooking->id)->with('success', 'Booking successfully updated.');
     }

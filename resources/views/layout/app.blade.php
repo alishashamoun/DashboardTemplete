@@ -80,7 +80,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" />
 
     <!-- Bootstrap -->
- 
+
 
 </head>
 
@@ -184,7 +184,12 @@
                     </div>
                 </nav>
 
-                @yield('content')
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                    <!-- Content -->
+                    @yield('content')
+                </div>
+
                 <!-- Footer -->
                 <footer class="content-footer footer bg-footer-theme">
                     <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
@@ -210,7 +215,7 @@
 
     <!-- Overlay -->
     <div class="layout-overlay layout-menu-toggle"></div>
-    </div>
+
     <!-- / Layout wrapper -->
 
 
@@ -247,20 +252,14 @@
             // new DataTable('');
 
         });
-        @if (session('success'))
-            toastr.success("{{ session('success') }}");
-        @endif
-        @if (session('error'))
-            toastr.error("{{ session('error') }}")
-        @endif
-        @if (session('info'))
-            toastr.info("{{ session('info') }}")
-        @endif
-        @if ($errors->any())
-            @foreach ($errors->all() as $error)
-                toastr.error("{{ $error }}")
-            @endforeach
-        @endif
+        <?php if (session('success')): ?>
+        toastr.success("<?= session('success') ?>");
+        <?php endif; ?>
+
+        <?php if (session('error')): ?>
+        toastr.error("<?= session('error') ?>");
+        <?php endif; ?>
+
 
         function formatState(state) {
             if (!state.id) {
@@ -285,7 +284,7 @@
                 "lengthChange": false,
                 "autoWidth": true,
                 "rowReorder": true,
-                    dom: '<"top d-flex justify-content-end align-items-center gap-3"fB>rtip',
+                dom: '<"top d-flex justify-content-end align-items-center gap-3"fB>rtip',
                 buttons: [
                     'copy',
                     'csv',

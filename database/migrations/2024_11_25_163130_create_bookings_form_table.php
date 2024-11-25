@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('booking_form', function (Blueprint $table) {
+        Schema::create('bookings_form', function (Blueprint $table) {
             $table->id();
-            $table->Integer('customer_id');
-            $table->Integer('order_id');
             $table->string('customer_name');
             $table->string('admin_name');
             $table->string('product_type');
@@ -40,16 +38,15 @@ return new class extends Migration
             $table->string('reference_no')->nullable()->unique();
             $table->string('no_of_piece')->nullable();
             $table->string('weight')->nullable();
-            $table->decimal('cod_amount', 8, 2)->nullable();
-            $table->decimal('delivery_charges', 8, 2)->nullable();
-            $table->decimal('total_charges', 8, 2)->nullable();
-            $table->decimal('fuel_surcharge', 8, 2)->nullable();
-            $table->decimal('sales_tax', 8, 2)->nullable();
-            $table->decimal('net_amount', 8, 2)->nullable();
+            $table->integer('cod_amount')->nullable();
+            $table->integer('delivery_charges')->nullable();
+            $table->integer('total_charges')->nullable();
+            $table->integer('fuel_surcharge')->nullable();
+            $table->integer('sales_tax')->nullable();
+            $table->integer('net_amount')->nullable();
             $table->string('status')->nullable();
             $table->timestamps();
         });
-
     }
 
     /**
@@ -57,6 +54,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('booking_form');
+        Schema::dropIfExists('bookings_form');
     }
 };

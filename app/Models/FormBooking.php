@@ -6,12 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class FormBooking extends Model
 {
-    protected $table = 'booking_form';
+    protected $table = 'bookings_form';
 
     protected $fillable = [
 
-        'customer_id',
-        'order_id',
         'customer_name',
         'admin_name',
         'product_type',
