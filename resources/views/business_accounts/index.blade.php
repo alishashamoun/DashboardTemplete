@@ -6,8 +6,7 @@
     }
 </style>
 @section('content')
-    {{-- ///// --}}
-    <div class="content-wrapper">
+
         <div class="container-fluid flex-grow-1 container-p-y">
             <div class="row">
                 <div class="col-lg-12 mb-4 order-0">
@@ -27,8 +26,8 @@
                                             <div class="col-6">
                                                 <h4>Business Accounts</h4>
                                             </div>
-                                            <div class="col-6 text-end">
-                                                <a href="#" class="btn-style add_new">Add New</a>
+                                            <div class="col-6 text-end mb-4">
+                                                <a href="{{ route('bussiness-account.create') }}" class="btn-style add_new">Add New</a>
                                             </div>
                                         </div>
                                         <div class="panel-body" id="same_form_layout">
@@ -85,5 +84,5 @@
                 </div>
             </div>
         </div>
-    </div>
+   
 @endsection

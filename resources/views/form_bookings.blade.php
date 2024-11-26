@@ -14,7 +14,7 @@
                                     <div class="row mb-3">
                                         <div class="col-2">
                                             <label for="name">Select Customer</label>
-                                            <select id="" class="form-control" name="customer_name" required>
+                                            <select class="form-control" name="customer_name" required>
                                                 <option value="jonah">Jonah</option>
                                                 <option value="xaviye">Xaviye</option>
                                             </select>
@@ -27,11 +27,9 @@
                                         <div class="col-2">
                                             <label for="admin_name">Branch</label>
                                             <select class="form-control" name="admin_name" required>
-                                                <option value="" disabled selected>Select Branch</option> <!-- Placeholder option -->
-                                                <!-- Add other dynamic options here -->
+                                                <option value="" disabled selected>Select Branch</option>
                                                 <option value="branch_1">Branch 1</option>
                                                 <option value="branch_2">Branch 2</option>
-                                                <!-- More options can be dynamically added from your database -->
                                             </select>
                                             @error('admin_name')
                                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -41,7 +39,7 @@
 
                                         <div class="col-2">
                                             <label for="name">Product Type</label>
-                                            <select id="" class="form-control" name="product_type" required>
+                                            <select class="form-control" name="product_type" required>
                                                 <option value="product_1">Product 1</option>
                                                 <option value="product_1">Product 2</option>
 
@@ -54,7 +52,7 @@
 
                                         <div class="col-2">
                                             <label for="name">Service Type</label>
-                                            <select id="" class="form-control" name="service_type" >
+                                            <select class="form-control" name="service_type">
                                                 <option value="service_1">Service 1</option>
                                                 <option value="service_2">Service 2</option>
                                             </select>
@@ -85,7 +83,7 @@
                                         <div class="row mt-4">
                                             <div class="col-2">
                                                 <label for="name">Booking Type</label>
-                                                <select id="" class="form-control" name="booking_type" >
+                                                <select class="form-control" name="booking_type">
                                                     <option value="apnd">Apnd</option>
                                                     <option value="apnd">Apnd</option>
                                                 </select>
@@ -108,7 +106,7 @@
                                     <div class="row mb-3">
                                         <div class="col-2">
                                             <label for="name">City/Area</label>
-                                            <select id="" class="form-control" name="area" >
+                                            <select class="form-control" name="area">
                                                 <option value="islamabad">Islamabad</option>
                                                 <option value="karachi">Karachi</option>
 
@@ -144,15 +142,15 @@
 
                                         <div class="col-1">
                                             <label for="name">CNIC</label>
-                                            <input type="text" placeholder="CNIC" class="form-control" name="cnic" >
+                                            <input type="text" placeholder="CNIC" class="form-control" name="cnic">
                                             @error('cnic')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
                                         </div>
                                         <div class="col-3">
                                             <label for="">Pick Address</label>
-                                            <input type="text" placeholder="Pick Address" class="form-control" required
-                                                name="pickup_address">
+                                            <input type="text" placeholder="Pick Address" class="form-control"
+                                                required name="pickup_address">
                                             @error('pickup_address')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
@@ -161,7 +159,7 @@
                                     <div class="row mb-3">
                                         <div class="col-12">
                                             <label for="">Address</label>
-                                            <textarea id="" cols="15" rows="5" class="form-control" name="sender_address" required
+                                            <textarea cols="15" rows="5" class="form-control" name="sender_address" required
                                                 placeholder="Sender Address"></textarea>
                                             @error('sender_address')
                                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -185,7 +183,7 @@
                                             <div class="row mb-3">
                                                 <div class="col-3">
                                                     <label for="name">City/Area</label>
-                                                    <select id="" class="form-control" name="city" required>
+                                                    <select class="form-control" name="city" required>
                                                         <option value="invoice">invoice</option>
                                                         <option value="cash">cash</option>
                                                         <option value="pay">pay</option>
@@ -262,7 +260,7 @@
                                                 <div class="col-12">
                                                     <label for="">Item Detail</label>
 
-                                                    <textarea id="" cols="50" rows="1" class="form-control" name="item_detail" required></textarea>
+                                                    <textarea cols="50" rows="1" class="form-control" name="item_detail" required></textarea>
                                                     @error('item_detail')
                                                         <div class="invalid-feedback">{{ $message }}</div>
                                                     @enderror
@@ -273,7 +271,7 @@
                                                 <div class="col-12 mt-3">
                                                     <label for="">
                                                         Special Instruction</label>
-                                                    <textarea id="" cols="50" rows="1" class="form-control" name="special_instruction" required></textarea>
+                                                    <textarea cols="50" rows="1" class="form-control" name="special_instruction" required></textarea>
                                                     @error('special_instruction')
                                                         <div class="invalid-feedback">{{ $message }}</div>
                                                     @enderror
@@ -283,14 +281,16 @@
                                             <div class="row">
                                                 <div class="col-6 mt-3">
                                                     <label for="">Reference No.</label>
-                                                    <input type="number" class="form-control" name="reference_no" required>
+                                                    <input type="number" class="form-control" name="reference_no"
+                                                        required>
                                                     @error('reference_no')
                                                         <div class="invalid-feedback">{{ $message }}</div>
                                                     @enderror
                                                 </div>
                                                 <div class="col-6 mt-3">
                                                     <label for="">No. of Pieces</label>
-                                                    <input type="number" class="form-control" name="no_of_piece" required>
+                                                    <input type="number" class="form-control" name="no_of_piece"
+                                                        required>
                                                     @error('no_of_piece')
                                                         <div class="invalid-feedback">{{ $message }}</div>
                                                     @enderror
@@ -300,23 +300,21 @@
                                             <div class="row">
                                                 <div class="col-4 mt-3">
                                                     <label for="">Order ID.</label>
-                                                    <input type="number" id="" class="form-control" required
-                                                        name="order_id">
+                                                    <input type="number" class="form-control" required name="order_id">
                                                     @error('order_id')
                                                         <div class="invalid-feedback">{{ $message }}</div>
                                                     @enderror
                                                 </div>
                                                 <div class="col-4 mt-3">
                                                     <label for="">Weight (Kg)</label>
-                                                    <input type="number" id="" class="form-control" required
-                                                        name="weight">
+                                                    <input type="number" class="form-control" required name="weight">
                                                     @error('weight')
                                                         <div class="invalid-feedback">{{ $message }}</div>
                                                     @enderror
                                                 </div>
                                                 <div class="col-4 mt-3">
                                                     <label for="">*COD Amount</label>
-                                                    <input type="number" id="" class="form-control" required
+                                                    <input type="number" class="form-control" required
                                                         name="cod_amount">
                                                     @error('cod_amount')
                                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -369,7 +367,8 @@
 
                                         <div class="col-2">
                                             <label for="name">Sales tax</label>
-                                            <input type="number" class="form-control" name="sales_tax"  value="0.00" required>
+                                            <input type="number" class="form-control" name="sales_tax" value="0.00"
+                                                required>
                                             @error('sales_tax')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
@@ -377,7 +376,8 @@
 
                                         <div class="col-2">
                                             <label for="name">Net Amount</label>
-                                            <input type="number" class="form-control" name="net_amount" value="0.00" required>
+                                            <input type="number" class="form-control" name="net_amount" value="0.00"
+                                                required>
                                             @error('net_Amount')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
@@ -397,8 +397,7 @@
                                     <div class="row mb-3">
                                         <div class="col-3">
                                             <label for="name">status</label>
-                                            <select name="status" id=""
-                                                class="js-example-templating form-control" required>
+                                            <select name="status" class="js-example-templating form-control" required>
                                                 <option value="new_booked">New booked</option>
                                                 <option value="parvel">Parcel</option>
                                             </select>
@@ -423,7 +422,7 @@
             </div>
             <div class="save-printbtn">
                 <button type="submit" class="btn btn-primary">Save</button>
-                {{-- <button type="" class="btn btn-primary">Save & Print</button> --}}
+                <button type="submit" class="btn btn-primary">Save & Print</button>
             </div>
         </form>
     </div>

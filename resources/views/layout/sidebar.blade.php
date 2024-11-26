@@ -129,8 +129,8 @@
             </a>
         </li>
 
-        <li class="menu-item {{ request()->routeIs('bussiness_account') ? 'active' : '' }}">
-            <a href="{{ route('bussiness_account') }}" class="menu-link">
+        <li class="menu-item {{ request()->routeIs('bussiness-account.index') ? 'active' : '' }}">
+            <a href="{{ route('bussiness-account.index') }}" class="menu-link">
                 <i class="menu-icon fa-regular fa-user"></i>
                 <div data-i18n="Basic"> Bussiness Accounts</div>
             </a>

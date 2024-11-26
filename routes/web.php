@@ -41,6 +41,7 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
     Route::resource('users', UserController::class);
     Route::resource('/form-booking', FormBookingsController::class);
+    Route::resource('/bussiness-account', BussinessAccountController::class);
     Route::get('view-all-order', [ViewOrderController::class, 'index'])->name('view_all_order');
     Route::get('manifest', [ManifestController::class, 'index'])->name('manifest');
     Route::get('de-manifest', [DeManifestController::class, 'index'])->name('de_manifest');
@@ -48,7 +49,6 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('bulk-status-update', [BulkStatusUpdateController::class, 'index'])->name('bulk_status_update');
     Route::get('order-status-update', [OrderStatusUpdateController::class, 'index'])->name('order_status_update');
     Route::get('view-order-assign', [ViewOrderAssignController::class, 'index'])->name('view_order_assign');
-    Route::get('bussiness-account', [BussinessAccountController::class, 'index'])->name('bussiness_account');
     Route::get('charges-reports', [ChargeReportController::class, 'index'])->name('charges_reports');
     Route::get('order-reports', [OrderReportController::class, 'index'])->name('order_reports');
     Route::get('comments-reports', [CommentReportController::class, 'index'])->name('comments_reports');
