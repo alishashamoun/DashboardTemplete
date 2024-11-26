@@ -1,10 +1,5 @@
 @extends('layout.app')
 @section('content')
-@if ($errors->any())
-@foreach ($errors->all() as $error)
-    toastr.error("{{ $error }}");
-@endforeach
-@endif
     <div class="container-fluid flex-grow-1 container-p-y">
 
         <form method="POST" action="{{ route('bussiness-account.store') }}" enctype="multipart/form-data">
@@ -20,9 +15,12 @@
                                     <div class="row mb-3">
                                         <div class="col-2">
                                             <label for="business_name">Business Name :</label>
-                                            <select class="form-control @error('business_name') is-invalid @enderror" id="business_name" name="business_name">
-                                                <option value="jonah" {{ old('business_name') == 'jonah' ? 'selected' : '' }}>Jonah</option>
-                                                <option value="xaviye" {{ old('business_name') == 'xaviye' ? 'selected' : '' }}>Xaviye</option>
+                                            <select class="form-control @error('business_name') is-invalid @enderror"
+                                                id="business_name" name="business_name">
+                                                <option value="jonah"
+                                                    {{ old('business_name') == 'jonah' ? 'selected' : '' }}>Jonah</option>
+                                                <option value="xaviye"
+                                                    {{ old('business_name') == 'xaviye' ? 'selected' : '' }}>Xaviye</option>
                                             </select>
 
                                             @error('customer_name')
@@ -74,7 +72,9 @@
 
                                         <div class="col-2">
                                             <label for="sales_represent">Sales Representative:</label>
-                                            <input type="text" name="sales_representative" id="sales_representative" class="form-control @error('sales_representative') is-invalid @enderror" value="{{ old('sales_representative') }}">
+                                            <input type="text" name="sales_representative" id="sales_representative"
+                                                class="form-control @error('sales_representative') is-invalid @enderror"
+                                                value="{{ old('sales_representative') }}">
                                             @error('sales_representative')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
@@ -84,7 +84,7 @@
                                             <div class="col-12">
                                                 <label for="office_address">Office Address :</label>
                                                 <textarea name="office_address" cols="5" rows="2"
-                                                class="form-control @error('office_address') is-invalid @enderror" id="office_address">{{ old('office_address') }}</textarea>
+                                                    class="form-control @error('office_address') is-invalid @enderror" id="office_address">{{ old('office_address') }}</textarea>
 
                                                 @error('office_address')
                                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -108,7 +108,8 @@
                                         <div class="row mt-4">
                                             <div class="col-3">
                                                 <label for="logo_image">Logo Image :</label>
-                                                <input type="file" name="logo_image" class="@error('logo_image') is-invalid @enderror" id="logo_image">
+                                                <input type="file" name="logo_image"
+                                                    class="@error('logo_image') is-invalid @enderror" id="logo_image">
 
                                                 @error('logo_image')
                                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -116,7 +117,8 @@
                                             </div>
                                             <div class="col-3">
                                                 <label for="cnic_copy">CNIC Copy :</label>
-                                                <input type="file" name="cnic_copy" id="cnic_copy" class="form-control @error('cnic_copy') is-invalid @enderror">
+                                                <input type="file" name="cnic_copy" id="cnic_copy"
+                                                    class="form-control @error('cnic_copy') is-invalid @enderror">
 
                                                 @error('cnic_copy')
                                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -250,10 +252,12 @@
                                         </div>
 
                                         <div class="col-4">
-                                            <label for="expected_average_shipments_per_month">Expected Average Shipments / Month :</label>
+                                            <label for="expected_average_shipments_per_month">Expected Average Shipments /
+                                                Month :</label>
                                             <input type="number" name="expected_average_shipments_per_month"
                                                 class="form-control @error('expected_average') is-invalid @enderror"
-                                                id="expected_average_shipments_per_month" value="{{ old('expected_average_shipments_per_month') }}" />
+                                                id="expected_average_shipments_per_month"
+                                                value="{{ old('expected_average_shipments_per_month') }}" />
                                             @error('expected_average_shipments_per_month')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror

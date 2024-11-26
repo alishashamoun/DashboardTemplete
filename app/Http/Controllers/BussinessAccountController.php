@@ -57,13 +57,13 @@ class BussinessAccountController extends Controller
             'iban' => 'nullable|string|max:34',
             'password' => 'required|string|min:8|same:confirmation_password',
         ]);
-        Log::info('Validated data:',  $validated);
+        Log::info('Validated data:', $validated);
 
         $validated['enable_booking_form'] = $request->has('enable_booking_form') ? true : false;
         // dd($request->all());
 
         try {
-        DB::beginTransaction();
+            DB::beginTransaction();
             $logoImagePath = null;
             if ($request->hasFile('logo_image')) {
                 $logoImage = $request->file('logo_image');
@@ -79,7 +79,7 @@ class BussinessAccountController extends Controller
             if ($request->hasFile('cnic_copy')) {
                 $cnicCopy = $request->file('cnic_copy');
                 $cnicCopyName = time() . '.' . $cnicCopy->getClientOriginalExtension();
-                $logoImage->storeAs('public/cnic_copies',  $cnicCopyName);
+                $logoImage->storeAs('public/cnic_copies', $cnicCopyName);
                 $cnicCopyPath = asset('cniccopy/' . $cnicCopyName);
             }
 
