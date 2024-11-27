@@ -292,11 +292,11 @@
                                         <div class="col-4">
                                             <label for="shipments month">Expected Average Shipments /
                                                 Month :</label>
-                                            <input type="number" name="shipments month"
-                                                class="form-control @error('shipments month') is-invalid @enderror"
-                                                id="shipments month"
+                                            <input type="number" name="shipments_month"
+                                                class="form-control @error('shipments_month') is-invalid @enderror"
+                                                id="shipments_month"
                                                 value="{{ $business->shipments_month }}" />
-                                            @error('shipments month')
+                                            @error('shipments_month')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
                                         </div>
