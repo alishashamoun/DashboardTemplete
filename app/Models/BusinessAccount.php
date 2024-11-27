@@ -4,9 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Business extends Model
+class BusinessAccount extends Model
 {
-    protected $table = 'businesses';
+
+    protected $table = 'businesses_account';
+
 
     protected $fillable = [
         'business_name',
@@ -30,14 +32,14 @@ class Business extends Model
         'shipments_month',
         'bank_name',
         'account_title',
-        'swift_code',
-        'settlment',
         'account_number',
         'branch_name',
         'branch_code',
         'ntn',
         'stn',
         'iban',
+        'swift_code',
+        'settlment',
         'password',
     ];
 }

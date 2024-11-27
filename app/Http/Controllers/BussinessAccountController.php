@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Business;
+use App\Models\BusinessAccount;
 use DB;
 use File;
 use Hash;
@@ -14,7 +14,7 @@ class BussinessAccountController extends Controller
 {
     public function index()
     {
-        $bussiness = Business::all();
+        $bussiness = BusinessAccount::all();
         return view('business_accounts.index', compact('bussiness'));
     }
 
@@ -40,7 +40,7 @@ class BussinessAccountController extends Controller
             'enable_booking_form' => 'nullable|boolean',
             'name' => 'required|string|max:255',
             'mobile' => 'required|string|max:20',
-            'email' => 'required|email|unique:businesses,email',
+            'email' => 'required|email|unique:businesses_account,email',
             'region' => 'required|string|max:255',
             'area' => 'required|string|max:255',
             'contact_person' => 'required|string|max:255',
@@ -79,7 +79,7 @@ class BussinessAccountController extends Controller
                 $cnicCopy->move(public_path('uploads/cnic_copies'), $cnicCopyName);
             }
 
-            $business = Business::create([
+            $business =  BusinessAccount::create([
                 'business_name' => $validated['business_name'],
                 'customer_type' => $validated['customer_type'],
                 'cnic' => $validated['cnic'],
@@ -130,7 +130,7 @@ class BussinessAccountController extends Controller
     public function show($id)
     {
         // Retrieve the business record from the database
-        $business = Business::findOrFail($id);
+        $business =  BusinessAccount::findOrFail($id);
 
         // Log the file path
         Log::info('File path:', ['path' => asset('storage/' . $business->cnic_copy)]);
@@ -141,7 +141,7 @@ class BussinessAccountController extends Controller
 
     public function edit($id)
     {
-        $business = Business::find($id);
+        $business =  BusinessAccount::find($id);
         return view('business_accounts.edit', compact('business'));
     }
 
@@ -162,7 +162,7 @@ class BussinessAccountController extends Controller
             'enable_booking_form' => 'nullable|boolean',
             'name' => 'required|string|max:255',
             'mobile' => 'required|string|max:20',
-            'email' => 'required|email|unique:businesses,email,' . $id,
+            'email' => 'required|email|unique:businesses_account,email,' . $id,
             'region' => 'required|string|max:255',
             'area' => 'required|string|max:255',
             'contact_person' => 'required|string|max:255',
@@ -202,7 +202,7 @@ class BussinessAccountController extends Controller
                 $cnicCopy->move(public_path('uploads/cnic_copies'), $cnicCopyName);
             }
 
-            $business = Business::findOrFail($id);
+            $business =  BusinessAccount::findOrFail($id);
 
             $business->update([
                 'business_name' => $validated['business_name'],
@@ -253,7 +253,7 @@ class BussinessAccountController extends Controller
 
     public function destroy($id)
     {
-        $business = Business::find($id);
+        $business =  BusinessAccount::find($id);
         $business->delete();
         return redirect()->route('bussiness-account.index')->with('success', 'Business account deleted successfully!');
     }

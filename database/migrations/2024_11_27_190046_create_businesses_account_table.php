@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('businesses', function (Blueprint $table) {
+        Schema::create('businesses_account', function (Blueprint $table) {
             $table->id();
             $table->string('business_name');
             $table->string('customer_type');
@@ -43,7 +43,6 @@ return new class extends Migration
             $table->string('swift_code');
             $table->string('settlment');
             $table->string('password');
-            $table->string('confirm_password');
             $table->timestamps();
         });
     }
@@ -53,6 +52,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('businesses');
+        Schema::dropIfExists('businesses_account');
     }
 };
