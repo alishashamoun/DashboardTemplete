@@ -27,7 +27,7 @@ class Business extends Model
         'contact_person',
         'website_url',
         'product_type',
-        'expected_average_shipments_per_month',
+        'shipments_month',
         'bank_name',
         'account_title',
         'swift_code',
@@ -39,6 +39,5 @@ class Business extends Model
         'stn',
         'iban',
         'password',
-        'confirm_password',
     ];
 }

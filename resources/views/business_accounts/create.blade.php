@@ -118,7 +118,7 @@
                                             <div class="col-3">
                                                 <label for="cnic_copy">CNIC Copy :</label>
                                                 <input type="file" name="cnic_copy" id="cnic_copy"
-                                                    class="form-control @error('cnic_copy') is-invalid @enderror">
+                                                    class=" @error('cnic_copy') is-invalid @enderror">
 
                                                 @error('cnic_copy')
                                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -252,13 +252,13 @@
                                         </div>
 
                                         <div class="col-4">
-                                            <label for="expected_average_shipments_per_month">Expected Average Shipments /
+                                            <label for="shipments_month">Expected Average Shipments /
                                                 Month :</label>
-                                            <input type="number" name="expected_average_shipments_per_month"
-                                                class="form-control @error('expected_average') is-invalid @enderror"
-                                                id="expected_average_shipments_per_month"
-                                                value="{{ old('expected_average_shipments_per_month') }}" />
-                                            @error('expected_average_shipments_per_month')
+                                            <input type="number" name="shipments_month"
+                                                class="form-control @error('shipments_month') is-invalid @enderror"
+                                                id="shipments_month"
+                                                value="{{ old('shipments_month') }}" />
+                                            @error('shipments_month')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
                                         </div>

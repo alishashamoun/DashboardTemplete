@@ -52,23 +52,44 @@
                                                                         <th>CNIC Copy </th>
                                                                         <th>Status</th>
                                                                         <th>Action</th>
+                                                                        <th></th>
+                                                                    
                                                                     </tr>
                                                                 </thead>
+
                                                                 <tbody>
+                                                                    @php
+                                                                         $id = 1;
+                                                                    @endphp
+                                                                    @foreach ($bussiness  as $business)
                                                                     <tr class="gradeA odd" role="row">
-                                                                        <td>1</td>
-                                                                        <td class="sorting_1">1029</td>
-                                                                        <td class="sorting_1">Transit Manifest</td>
-                                                                        <td class="sorting_1">Local</td>
-                                                                        <td class="sorting_1">By Road</td>
+                                                                        <td>{{ $id++ }}</td>
+                                                                        <td class="sorting_1">
+                                                                            <img src="{{ asset('uploads/logo_images/' . $business->logo_image) }}" alt="Logo Image" width="100">
+                                                                        </td>
                                                                         <td class="sorting_1"></td>
                                                                         <td class="sorting_1"></td>
                                                                         <td class="sorting_1"></td>
+                                                                        <td class="sorting_1">{{ $business->business_name }}</td>
                                                                         <td class="sorting_1"></td>
-                                                                        <td class="sorting_1">admin branch</td>
+                                                                        <td class="sorting_1">{{ $business->email }}</td>
+                                                                        <td class="sorting_1">{{ $business->mobile }}</td>
+                                                                        <td class="sorting_1">
+                                                                            <img src="{{ asset('uploads/cnic_copies/' . $business->cnic_copy) }}" alt="Cnic Image" width="100">
+                                                                        </td>
                                                                         <td class="sorting_1"></td>
-                                                                        <td class="sorting_1"></td>
+                                                                        <td class="sorting_1">
+                                                                            <a href="{{ route('bussiness-account.edit', $business->id ) }}" class="btn btn-warning">Edit</a>
+                                                                        </td>
+                                                                        <td class="sorting_1">
+                                                                            <form method="POST" action="{{ route('bussiness-account.destroy', $business->id) }}">
+                                                                                @csrf
+                                                                                @method('delete')
+                                                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                                                            </form>
+                                                                        </td>
                                                                     </tr>
+                                                                    @endforeach
                                                                 </tbody>
                                                             </table>
                                                         </form>
@@ -84,5 +105,5 @@
                 </div>
             </div>
         </div>
-   
+
 @endsection
