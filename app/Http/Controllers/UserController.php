@@ -71,12 +71,10 @@ class UserController extends Controller
         }
     }
 
-    //User Show
     public function show($id)
     {
         $user = User::findOrFail($id);
         $roles = $user->getRoleNames();
-
         return view('users.show', compact('user', 'roles'));
     }
 
@@ -86,14 +84,11 @@ class UserController extends Controller
         $user = User::find($id);
         $roles = Role::select('id', 'name')->get();
         $userRole = $user->roles->pluck('name', 'name')->all();
-
         return view('user.create', compact('user', 'roles', 'userRole'));
     }
 
-    //User Update
     public function update(Request $request, $id)
     {
-        // Validate the request
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users,email,' . $id,
@@ -101,30 +96,20 @@ class UserController extends Controller
             'roles' => 'required'
         ]);
 
-        // Get all request data
         $input = $request->all();
 
-        // If password is not empty, hash it
         if (!empty($input['password'])) {
             $input['password'] = Hash::make($input['password']);
         } else {
-            // Exclude password from input if not being updated
             $input = Arr::except($input, keys: ['password']);
         }
 
 
         $user = User::find($id);
         $user->update($input);
-
-
-
         $roles = $request->input('roles');
 
-
-        // Sync roles with the user
         $user->syncRoles($roles);
-
-        // Redirect with success message
         return redirect()->route('users.index')
             ->with('success', 'User updated successfully');
     }
@@ -134,10 +119,5 @@ class UserController extends Controller
         return redirect()->route('users.index')
             ->with('success', 'User deleted successfully');
     }
-
-    // $adminRole = Role::create(['name' => 'admin']);
-    // $userRole = Role::create(['name' => 'user']);
-    // $user = User::find(1);
-    // $user->assignRole('admin');
 
 }

@@ -79,7 +79,7 @@ class BussinessAccountController extends Controller
                 $cnicCopy->move(public_path('uploads/cnic_copies'), $cnicCopyName);
             }
 
-            $business =  BusinessAccount::create([
+            $business = BusinessAccount::create([
                 'business_name' => $validated['business_name'],
                 'customer_type' => $validated['customer_type'],
                 'cnic' => $validated['cnic'],
@@ -130,7 +130,7 @@ class BussinessAccountController extends Controller
     public function show($id)
     {
         // Retrieve the business record from the database
-        $business =  BusinessAccount::findOrFail($id);
+        $business = BusinessAccount::findOrFail($id);
 
         // Log the file path
         Log::info('File path:', ['path' => asset('storage/' . $business->cnic_copy)]);
@@ -141,7 +141,7 @@ class BussinessAccountController extends Controller
 
     public function edit($id)
     {
-        $business =  BusinessAccount::find($id);
+        $business = BusinessAccount::find($id);
         return view('business_accounts.edit', compact('business'));
     }
 
@@ -202,7 +202,7 @@ class BussinessAccountController extends Controller
                 $cnicCopy->move(public_path('uploads/cnic_copies'), $cnicCopyName);
             }
 
-            $business =  BusinessAccount::findOrFail($id);
+            $business = BusinessAccount::findOrFail($id);
 
             $business->update([
                 'business_name' => $validated['business_name'],
@@ -250,11 +250,11 @@ class BussinessAccountController extends Controller
 
 
     }
-
     public function destroy($id)
     {
-        $business =  BusinessAccount::find($id);
+        $business = BusinessAccount::find($id);
         $business->delete();
+
         return redirect()->route('bussiness-account.index')->with('success', 'Business account deleted successfully!');
     }
 
